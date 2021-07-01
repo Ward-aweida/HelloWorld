@@ -6,13 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="472dp"
+        android:layout_height="762dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345">
+
+
+        <Button
+            android:id="@+id/btnClickhere"
+            android:layout_width="302dp"
+            android:layout_height="37dp"
+            android:backgroundTint="#03A9F4"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Button"
+            android:textAlignment="center"
+            android:textColorHighlight="#0E0E0E" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textViewn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="TextView"
+            android:textAlignment="center" />
+
+
+        <TextView
+            android:id="@+id/textV"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Hello World!"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Click here"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/nextPage"
+            android:layout_width="218dp"
+            android:layout_height="98dp"
+            android:text="next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.513" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
