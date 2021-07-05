@@ -12,7 +12,6 @@ import java.text.BreakIterator;
 
 public class MainActivity2 extends AppCompatActivity {
     Button lastPage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     private void openActivityMain() {
         Intent intent=new Intent(this,MainActivity.class);
+
         startActivity(intent);
     }
 

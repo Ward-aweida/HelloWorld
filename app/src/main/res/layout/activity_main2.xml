@@ -20,8 +20,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="183dp"
-        android:layout_height="65dp"
+        android:layout_width="331dp"
+        android:layout_height="67dp"
         android:text="TextViewAct2"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"

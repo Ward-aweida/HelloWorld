@@ -3,6 +3,7 @@ package com.example.helloworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.inputmethodservice.ExtractEditText;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,15 +22,22 @@ public class MainActivity extends AppCompatActivity {
         Button btn;
         final int[] count = {0};
         TextView txv;
+        TextView TextViewAct2=(TextView)findViewById(R.id.textView2);
         btn =(Button) findViewById(R.id.button);
         txv=(TextView) findViewById(R.id.textV);
-        TextView textViewAct2;
+
 
         nextPage = findViewById(R.id.nextPage);
+        Intent callingIntent =getIntent();
+
+
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMainActivity2();
+                Intent intent=new Intent();
+               
+                     openMainActivity2();
+
             }
 
 
@@ -70,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void openMainActivity2() {
         Intent intent = new Intent(this,MainActivity2.class);
+        //intent.putExtra("textViewn",nextPage.getText().toString());
         startActivity(intent);
 
     }
