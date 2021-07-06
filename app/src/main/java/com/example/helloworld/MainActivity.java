@@ -43,11 +43,14 @@ public class MainActivity extends AppCompatActivity {
                  String Name=textViewShared.getText().toString();
               SharedPreferences.Editor editor=sharedPreferences.edit();
               editor.putString("Add Item ",Name);
+                 Intent intent= new Intent(MainActivity.this,ListActivity.class);
+                 Toast.makeText(MainActivity.this,"information save", Toast.LENGTH_LONG).show();
+                 startActivity(intent);
               editor.apply();
 
-                 Toast.makeText(MainActivity.this,"information save", Toast.LENGTH_LONG).show();
-                  Intent intent= new Intent(MainActivity.this,MainActivity2.class);
-                  startActivity(intent);
+
+
+
 
              }
          });

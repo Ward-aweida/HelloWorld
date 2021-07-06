@@ -16,7 +16,7 @@ public class MainActivity2 extends AppCompatActivity {
     Button lastPage;
     TextView textViewSherd;
     Button ListAdd;
-    SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-        textViewSherd =findViewById(R.id.textViewShared);
-        ListAdd=findViewById(R.id.ListActivity);
-        preferences = getSharedPreferences("SHERD_PREF",MODE_PRIVATE);
-        String  Name = preferences.getString("Name","");
-        textViewSherd.setText(Name);
+
 
 
     }
