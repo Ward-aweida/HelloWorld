@@ -3,17 +3,20 @@ package com.example.helloworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.inputmethodservice.ExtractEditText;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button nextPage;
-
+    SharedPreferences sharedPreferences;
+    EditText textViewShared;
+    Button AddItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,20 +25,40 @@ public class MainActivity extends AppCompatActivity {
         Button btn;
         final int[] count = {0};
         TextView txv;
+         Button AddItem=(Button)findViewById(R.id.AddItem);
         TextView TextViewAct2=(TextView)findViewById(R.id.textView2);
         btn =(Button) findViewById(R.id.button);
         txv=(TextView) findViewById(R.id.textV);
 
 
+
         nextPage = findViewById(R.id.nextPage);
         Intent callingIntent =getIntent();
+         textViewShared=findViewById(R.id.textViewShared);
+
+           sharedPreferences=   getSharedPreferences("SHARED",MODE_PRIVATE);
+         AddItem.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 String Name=textViewShared.getText().toString();
+              SharedPreferences.Editor editor=sharedPreferences.edit();
+              editor.putString("Add Item ",Name);
+              editor.apply();
+
+                 Toast.makeText(MainActivity.this,"information save", Toast.LENGTH_LONG).show();
+                  Intent intent= new Intent(MainActivity.this,MainActivity2.class);
+                  startActivity(intent);
+
+             }
+         });
+
 
 
         nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
-               
+
                      openMainActivity2();
 
             }
