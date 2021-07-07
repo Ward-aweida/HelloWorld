@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ListActivity">
 
     <TextView
@@ -17,7 +18,14 @@
     <Button
         android:id="@+id/listAdd"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="2dp"
         android:layout_weight="1"
         android:text="list Add" />
+
+    <TextView
+        android:id="@+id/shareEmpty"
+        android:layout_width="91dp"
+        android:layout_height="6dp"
+        android:layout_weight="1"
+        android:text="shareEmpty" />
 </LinearLayout>

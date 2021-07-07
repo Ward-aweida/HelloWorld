@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
               editor.putString("Add Item ",Name);
                  Intent intent= new Intent(MainActivity.this,ListActivity.class);
                  Toast.makeText(MainActivity.this,"information save", Toast.LENGTH_LONG).show();
+                 Toast.makeText(MainActivity.this,"Cant be empty, please add an item", Toast.LENGTH_LONG).show();
                  startActivity(intent);
               editor.apply();
 
